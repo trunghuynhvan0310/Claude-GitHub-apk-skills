@@ -2,6 +2,15 @@
 
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning: [Semantic Versioning](https://semver.org/).
 
+## [1.1.0] - 2026-11-26
+
+### Added
+- `android-code-chuan`: code rules shared by all stages (pre-commit self-review, compact build-error summary, Android API pitfalls, lean architecture, Compose and XML notes).
+- `Giao diện: Compose | XML` line in `PROJECT_NOTES.template.md`.
+
+### Changed
+- `android-quy-trinh` now loads `android-code-chuan` before writing or editing code.
+
 ## [1.0.0] - 2026-11-26
 
 ### Added

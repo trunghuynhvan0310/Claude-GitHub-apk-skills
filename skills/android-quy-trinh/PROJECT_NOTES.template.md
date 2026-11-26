@@ -12,6 +12,7 @@ Giai đoạn: 1
 
 ## Quyết định kỹ thuật
 - applicationId:
+- Giao diện: Compose | XML
 - minSdk / targetSdk:
 - Thư viện chính:
 - Phiên bản hiện tại: 1.0.0 (versionCode 1)

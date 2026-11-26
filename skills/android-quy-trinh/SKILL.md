@@ -30,6 +30,9 @@ Trả lời tiếng Việt. Claude không chạy được app: chỉ được n�
 - Cùng một lỗi sửa 2–3 lần chưa được: dừng, nêu nguyên nhân nghi ngờ, và hỏi bước tái hiện, ảnh hoặc log, mẫu máy và phiên bản Android trước khi sửa tiếp.
 - Báo cáo cuối tối đa ~6 dòng: phiên bản, link APK, thay đổi chính, việc người dùng cần làm, điều chưa kiểm chứng được.
 
+## Viết hoặc sửa code
+Trước khi viết hoặc sửa code Kotlin, XML, Gradle hay Manifest, nạp skill `android-code-chuan` (một lần mỗi phiên). Mặc định Kotlin + Jetpack Compose; nếu `PROJECT_NOTES.md` ghi giao diện XML thì theo phần XML của skill đó.
+
 ## Thử chức năng mới
 Làm trên nhánh `feat/ten-chuc-nang`, build prerelease để test. Ổn thì gộp vào main, hỏng thì xóa nhánh để main luôn sạch.
 

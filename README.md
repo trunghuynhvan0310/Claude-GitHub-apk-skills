@@ -29,6 +29,8 @@ These skills put that into a checklist, split into stages so Claude does only wh
 | 2. Share the APK | [`android-chia-se-apk`](skills/android-chia-se-apk/SKILL.md) | LICENSE, privacy policy, changelog, GitHub Releases, onboarding/settings/About, stability checks | You agree to move to stage 2 |
 | 3. Google Play | [`android-google-play`](skills/android-google-play/SKILL.md) | AAB, Play App Signing, Data safety, store listing, testing tracks | You agree to move to stage 3 |
 
+A fourth skill, [`android-code-chuan`](skills/android-code-chuan/SKILL.md), applies in every stage whenever Claude writes or edits code: a self-review before each commit (imports, resources, Manifest, `exported`), compact build-error summaries in the workflow (so Claude reads a few lines instead of a whole log), common Android API pitfalls (runtime permissions, foreground services, edge-to-edge), a lean architecture, and short rules for both **Jetpack Compose** (default) and **XML views**.
+
 Each later stage includes the earlier ones. Claude records the current stage on the first line of `PROJECT_NOTES.md` in your app repo (`Giai đoạn: 1`), and **asks you before moving on**, only when there is a signal (you say you want to share it, or the app has been stable for a few builds). If you decline, it doesn't ask again in that session.
 
 ## Designed to be cheap in tokens
@@ -49,6 +51,7 @@ cd skills
 zip -r android-quy-trinh.zip android-quy-trinh
 zip -r android-chia-se-apk.zip android-chia-se-apk
 zip -r android-google-play.zip android-google-play
+zip -r android-code-chuan.zip android-code-chuan
 ```
 
 **Claude Code:** copy the folders into your skills directory.
@@ -57,7 +60,7 @@ zip -r android-google-play.zip android-google-play
 cp -r skills/* ~/.claude/skills/
 ```
 
-Install all three; stages 2 and 3 cost nothing until you move to them.
+Install all four; stages 2 and 3 cost nothing until you move to them.
 
 ## Typical flow
 
@@ -105,7 +108,7 @@ Chỉ skill lõi nạp sẵn, skill giai đoạn 2 và 3 nạp khi cần. Mỗi 
 
 ### Cài đặt
 
-Nén từng thư mục trong `skills/` thành file zip rồi tải lên phần Skills trong cài đặt Claude, hoặc với Claude Code thì chép vào `~/.claude/skills/` (lệnh ở phần English phía trên). Nên cài cả ba skill.
+Nén từng thư mục trong `skills/` thành file zip rồi tải lên phần Skills trong cài đặt Claude, hoặc với Claude Code thì chép vào `~/.claude/skills/` (lệnh ở phần English phía trên). Nên cài cả bốn skill. Skill thứ tư, `android-code-chuan`, là quy tắc viết code dùng chung mọi giai đoạn: tự rà trước khi commit, tóm tắt lỗi build gọn, bẫy API Android, kiến trúc gọn, hỗ trợ cả Compose (mặc định) và XML.
 
 ### Giới hạn
 
